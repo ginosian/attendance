@@ -1,6 +1,6 @@
 package attendance_manager.repository;
 
-import com.attendance_manager.domain.PasswordResetToken;
+import attendance_manager.domain.PasswordResetToken;
 
 /**
  * @author Marta Ginosyan

@@ -1,6 +1,6 @@
 package attendance_manager.repository;
 
-import com.attendance_manager.domain.VerificationToken;
+import attendance_manager.domain.VerificationToken;
 
 /**
  * @author Marta Ginosyan

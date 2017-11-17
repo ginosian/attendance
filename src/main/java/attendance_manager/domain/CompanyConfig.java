@@ -1,7 +1,7 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.converter.LocalTimeAttributeConverter;
-import com.attendance_manager.domain.types.VacationDisposeType;
+import attendance_manager.converter.LocalTimeAttributeConverter;
+import attendance_manager.domain.types.VacationDisposeType;
 
 import javax.persistence.Column;
 import javax.persistence.Convert;

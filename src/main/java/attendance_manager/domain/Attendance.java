@@ -1,7 +1,8 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.converter.LocalDateTimeAttributeConverter;
+import attendance_manager.converter.LocalDateTimeAttributeConverter;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 

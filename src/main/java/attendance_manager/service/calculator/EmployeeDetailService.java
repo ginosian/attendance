@@ -1,7 +1,7 @@
 package attendance_manager.service.calculator;
 
-import com.attendance_manager.domain.IndividualTimeOff;
-import com.attendance_manager.model.EmployeeDetails;
+import attendance_manager.domain.IndividualTimeOff;
+import attendance_manager.model.EmployeeDetails;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -2,6 +2,7 @@ package attendance_manager.domain;
 
 import org.hibernate.annotations.NaturalId;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -103,19 +104,19 @@ public class AbstractDomain {
     // region Hashcode/equals/toString overrides
     @Override
     public int hashCode() {
-        return Objects.hash( ssn);
+        return Objects.hash(ssn);
     }
 
     @Override
     public boolean equals(Object o) {
-        if ( this == o ) {
+        if (this == o) {
             return true;
         }
-        if ( !( o instanceof AbstractDomain ) ) {
+        if (!(o instanceof AbstractDomain)) {
             return false;
         }
         AbstractDomain domain = (AbstractDomain) o;
-        return Objects.equals( ssn, domain.ssn );
+        return Objects.equals(ssn, domain.ssn);
     }
     // endregion
 

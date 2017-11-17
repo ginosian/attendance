@@ -1,6 +1,6 @@
 package attendance_manager.repository;
 
-import com.attendance_manager.domain.Authority;
+import attendance_manager.domain.Authority;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 

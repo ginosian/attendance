@@ -1,7 +1,8 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.converter.LocalDateTimeAttributeConverter;
+import attendance_manager.converter.LocalDateTimeAttributeConverter;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -39,7 +40,7 @@ public class IndividualTimeOff extends AbstractDomain implements Serializable {
     private Boolean approved;
 
     @OneToMany
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private List<User> approvers;
 
     public IndividualTimeOff() {

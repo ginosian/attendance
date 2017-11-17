@@ -1,11 +1,12 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.converter.LocalDateAttributeConverter;
-import com.attendance_manager.utils.StringUtils;
+import attendance_manager.converter.LocalDateAttributeConverter;
+import attendance_manager.utils.StringUtils;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.utils.StringUtils;
+import attendance_manager.utils.StringUtils;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Column;

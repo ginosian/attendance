@@ -1,9 +1,9 @@
 package attendance_manager.service.calculator.impl;
 
-import com.attendance_manager.domain.IndividualTimeOff;
-import com.attendance_manager.domain.TimeOffType;
-import com.attendance_manager.model.EmployeeDetails;
-import com.attendance_manager.service.calculator.EmployeeDetailService;
+import attendance_manager.domain.IndividualTimeOff;
+import attendance_manager.domain.TimeOffType;
+import attendance_manager.model.EmployeeDetails;
+import attendance_manager.service.calculator.EmployeeDetailService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

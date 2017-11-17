@@ -1,6 +1,6 @@
 package attendance_manager.config;
 
-import com.attendance_manager.handler.SecuritySuccessHandler;
+import attendance_manager.handler.SecuritySuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,7 +35,7 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @PropertySource("classpath:security.properties")
-public class SecurityConfig  extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${path_base_login}")
     String PATH_BASE_LOGIN;

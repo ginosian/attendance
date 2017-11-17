@@ -1,6 +1,6 @@
 package attendance_manager.domain;
 
-import com.attendance_manager.converter.LocalTimeAttributeConverter;
+import attendance_manager.converter.LocalTimeAttributeConverter;
 
 import javax.persistence.Column;
 import javax.persistence.Convert;
@@ -16,7 +16,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "working_hours_scheme")
-public class WorkingHoursScheme  extends AbstractDomain implements Serializable {
+public class WorkingHoursScheme extends AbstractDomain implements Serializable {
 
     @Column(name = "title")
     private String title;
@@ -36,10 +36,10 @@ public class WorkingHoursScheme  extends AbstractDomain implements Serializable 
     }
 
     public WorkingHoursScheme(String ssn,
-            String title,
-            Short numberOfHoursForPeriod,
-            LocalTime workingDayStart,
-            LocalTime workingDayEnd) {
+                              String title,
+                              Short numberOfHoursForPeriod,
+                              LocalTime workingDayStart,
+                              LocalTime workingDayEnd) {
         super(ssn);
         this.title = title;
         this.numberOfHoursForPeriod = numberOfHoursForPeriod;

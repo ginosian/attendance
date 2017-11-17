@@ -1,6 +1,6 @@
 package attendance_manager.repository;
 
-import com.attendance_manager.domain.AbstractDomain;
+import attendance_manager.domain.AbstractDomain;
 
 /**
  * @author Marta Ginosyan
