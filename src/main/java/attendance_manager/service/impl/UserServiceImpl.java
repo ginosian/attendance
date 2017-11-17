@@ -1,4 +1,4 @@
-package attendance_manager;
+package attendance_manager.service.impl;
 
 import attendance_manager.domain.Authority;
 import attendance_manager.domain.PasswordResetToken;
@@ -8,6 +8,7 @@ import attendance_manager.repository.AuthorityRepository;
 import attendance_manager.repository.PasswordResetTokenRepository;
 import attendance_manager.repository.UserRepository;
 import attendance_manager.repository.VerificationTokenRepository;
+import attendance_manager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
