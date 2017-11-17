@@ -3,7 +3,6 @@ package attendance_manager.config;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -60,24 +59,6 @@ public class DatabaseConfig {
     String naming_strategy;
     @Value("${spring.jpa.properties.org.hibernate.generate_statistics}")
     boolean statistics;
-    @Value("${spring.jpa.properties.org.hibernate.cache.provider_class}")
-    String cache_provider_class;
-    @Value("${spring.jpa.properties.org.hibernate.cache.region.factory_class}")
-    String cache_region_factory_class;
-    @Value("${spring.jpa.properties.org.hibernate.cache.use_query_cache}")
-    boolean cache_use_query_cache;
-    @Value("${spring.jpa.properties.org.hibernate.cache.use_second_level_cache}")
-    boolean second_level_cache;
-    @Value("${spring.jpa.properties.org.hibernate.cache.internal.StandardQueryCache.maxElementsInMemory}")
-    int maxElementsInMemory;
-    @Value("${spring.jpa.properties.org.hibernate.cache.internal.StandardQueryCache.eternal}")
-    boolean eternal;
-    @Value("${spring.jpa.properties.org.hibernate.cache.internal.StandardQueryCache.timeToLiveSeconds}")
-    int timeToLiveSeconds;
-    @Value("${spring.jpa.properties.org.hibernate.cache.internal.StandardQueryCache.overflowToDisk}")
-    boolean overflowToDisk;
-    @Value("${spring.jpa.properties.org.hibernate.cache.internal.StandardQueryCache.memoryStoreEvictionPolicy}")
-    String memoryStoreEvictionPolicy;
     @Value("${spring.jpa.properties.org.hibernate.format_sql}")
     boolean format_sql;
     @Value("${spring.jpa.properties.org.hibernate.show_sql}")
@@ -107,13 +88,6 @@ public class DatabaseConfig {
         properties.put("hibernate.hbm2ddl.auto", hbm2ddl_auto);
         properties.put("hibernate.implicit_naming_strategy", naming_strategy);
         properties.put("hibernate.generate_statistics", statistics);
-        properties.put("hibernate.cache.provider_class", cache_provider_class);
-        properties.put("hibernate.cache.use_second_level_cache", second_level_cache);
-        properties.put("maxElementsInMemory", maxElementsInMemory);
-        properties.put("eternal", eternal);
-        properties.put("timeToLiveSeconds", timeToLiveSeconds);
-        properties.put("overflowToDisk", overflowToDisk);
-        properties.put("memoryStoreEvictionPolicy", memoryStoreEvictionPolicy);
         properties.put("hibernate.format_sql", format_sql);
         properties.put("hibernate.show_sql", show_sql);
         properties.put("hibernate.c3p0.min_size", min_size);
@@ -121,13 +95,6 @@ public class DatabaseConfig {
         properties.put("hibernate.c3p0.acquire_increment", increment);
         properties.put("hibernate.enable_lazy_load_no_trans", trans_lazy_load);
         return properties;
-    }
-
-    @Bean
-    public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
-        EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
-        ehCacheManagerFactoryBean.setShared(true);
-        return ehCacheManagerFactoryBean;
     }
 
     @Bean
