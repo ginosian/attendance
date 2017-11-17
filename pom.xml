@@ -109,8 +109,20 @@
             <version>2.6.11</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.193</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.2.6.RELEASE</version>
+        </dependency>
+
 
     </dependencies>
-
 
 </project>

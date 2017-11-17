@@ -3,6 +3,7 @@ package attendance_manager.config;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -18,6 +19,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 import java.util.Properties;
+
+//import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 
 /**
  * @author Marta Ginosyan
@@ -120,12 +123,12 @@ public class DatabaseConfig {
         return properties;
     }
 
-//    @Bean
-//    public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
-//        EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
-//        ehCacheManagerFactoryBean.setShared(true);
-//        return ehCacheManagerFactoryBean;
-//    }
+    @Bean
+    public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
+        EhCacheManagerFactoryBean ehCacheManagerFactoryBean = new EhCacheManagerFactoryBean();
+        ehCacheManagerFactoryBean.setShared(true);
+        return ehCacheManagerFactoryBean;
+    }
 
     @Bean
     public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
